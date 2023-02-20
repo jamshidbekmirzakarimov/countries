@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Countrs</title>
+  <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
@@ -19,7 +20,7 @@
           </svg>
         </a>
         
-        <button class="theme-button" type="button">
+        <button class="theme-button" type="button" onclick="changeTheme()">
           Dark Mode
         </button>
       </div>
@@ -34,10 +35,13 @@
         <form action="https://echo.htmlacademy.ru/courses"
         method="get">
         <div class="form-box">
-          <input class="input-search" type="search"
-          aria-label="qidiruv"
-          placeholder="Search for a country…" 
-          name="search">
+          <div class="label-box">
+            <input class="input-search" type="search"
+            aria-label="qidiruv"
+            placeholder="Search for a country…" 
+            name="search">
+            <button class="input-btn">search</button>
+          </div>
           <select class="select" name="country" id="country" aria-label="qitani_tanlang">
             <option class="option" disabled selected hidden>Filter by Region</option>
             <option class="option" value="africa">Africa</option>
@@ -50,52 +54,43 @@
       </form>
       
       
-      <ul class="country-section-list">
-        <li class="country-section-item">
-          <a class="country-img-link" href="./flag.html">
-            <img class="country-img" 
-            src="./images/germany.jpg" 
-            alt="germany flag" width="267" 
-            height="160">
-          </a>
-          <div class="country-section--title-box">
-            <!-- <h2>Country</h2> -->
-            <a class="country-img-link" href="#">
-              <h3 class="country-section--title">Germany</h3>
-            </a>
-            <p class="country-section-subtitle"><span class="country-section-subtitle-bold">Population: </span> 81,770,900</p>
-            
-            <p class="country-section-subtitle"><span class="country-section-subtitle-bold">Region: </span> Europe</p>
-            
-            <p class="country-section-subtitle"><span class="country-section-subtitle-bold">Capital: </span>Berlin</p>
-          </div>
-        </li>
+      <ul class="country-section-list list">
+        
+        
+        
       </ul>
     </div>
   </section>
-  
-  <template class="js-country-temp">
-    <li class="country-section-item">
-      <a class="country-img-link" href="./flag.html">
-        <img class="country-img" 
-        src="./images/germany.jpg" 
-        alt="germany flag" width="267" 
-        height="160">
-      </a>
-      <div class="country-section--title-box">
-        <!-- <h2>Country</h2> -->
-        <a class="country-img-link" href="#">
-          <h3 class="country-section--title">Germany</h3>
-        </a>
-        <p class="country-section-subtitle"><span class="country-section-subtitle-bold">Population: </span> 81,770,900</p>
-        
-        <p class="country-section-subtitle"><span class="country-section-subtitle-bold">Region: </span> Europe</p>
-        
-        <p class="country-section-subtitle"><span class="country-section-subtitle-bold">Capital: </span>Berlin</p>
-      </div>
-    </li>
-  </template>
 </main>
+
+
+
+
+
+<template class="template">
+  <li class="country-section-item">
+    <a class="country-img-link" href="./flag.html">
+      <img class="country-img" 
+      src="./images/germany.jpg" 
+      alt="germany flag" width="267" 
+      height="160">
+    </a>
+    <div class="country-section--title-box">
+      <!-- <h2>Country</h2> -->
+      <a class="country-img-link" href="#">
+        <h3 class="country-section--title name-country">Germany</h3>
+      </a>
+      <p class="country-section-subtitle">Population: <span class="country-section-subtitle-bold population">81,770,900</span></p>
+      
+      <p class="country-section-subtitle">Region: <span class="country-section-subtitle-bold region">Europe</span></p>
+      
+      <p class="country-section-subtitle">Capital: <span class="country-section-subtitle-bold capital">Berlin</span></p>
+    </div>
+  </li>
+</template>
+
+
+<script src="./js/dark-mode.js"></script>
 <script src="./js/main.js"></script>
 </body>
 </html>
